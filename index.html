@@ -42,7 +42,12 @@ function load(){try{let s=JSON.parse(localStorage.getItem('mergeHotelGrandV4'));
 function empty(){return S.board.findIndex(x=>!x)}
 function newOrder(){let keys=Object.keys(itemData),key=keys[(S.guestSeed*7+Math.floor(Math.random()*keys.length))%keys.length],level=2+Math.floor(Math.random()*3),guest=guests[S.guestSeed%guests.length];S.guestSeed++;return {guest,chain:key,level,coins:90+level*55,done:false}}
 function ensureOrders(){while(S.orders.length<6)S.orders.push(newOrder())}
-function iconFor(o){if(!o)return '';if(o.type==='gen')return genAsset(o.gen);return asset(itemData[o.chain].items[o.level-1][0])}
+function iconFor(o){
+ if(!o)return '';
+ // Saved generator cells store a chain id; resolve its matching image.
+ if(o.type==='gen')return genAsset(o.gen || itemData[o.chain]?.gen || 'gen_coffee');
+ return asset(itemData[o.chain].items[o.level-1][0]);
+}
 function itemName(o){if(!o)return '';return o.type==='gen'?itemData[o.chain].genName:itemData[o.chain].items[o.level-1][1]}
 function addItem(chain,level=1){let i=empty();if(i<0)return false;S.board[i]={type:'item',chain,level};return true}
 function render(){
