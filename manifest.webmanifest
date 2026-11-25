@@ -1,9 +1,0 @@
-{
-  "name": "Merge Hotel — Grand Merge",
-  "short_name": "Merge Hotel",
-  "start_url": "./",
-  "display": "standalone",
-  "background_color": "#fff0d9",
-  "theme_color": "#352267",
-  "icons": [{"src":"./assets/app-icon.png","sizes":"512x512","type":"image/png"}]
-}
