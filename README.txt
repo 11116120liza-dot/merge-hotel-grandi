@@ -1,13 +1,20 @@
-MERGE HOTEL — GRAND MERGE v4
+MERGE HOTEL GRAND — UPDATE 12 — исправление белого экрана
 
-Upload the CONTENTS of this folder to the root of your GitHub Pages repository.
-Keep the assets folder next to index.html.
-Replace index.html, sw.js, and manifest.webmanifest.
+Что исправлено и добавлено:
+- Исправлены отсутствовавшие элементы управления магазином кристаллов и сезонным событием, из-за которых JavaScript останавливался до запуска игры.
+- Обновлены версии скрипта и Service Worker, чтобы браузер не использовал сломанную копию из кеша.
+- Розовая подсветка предметов на поле, которые подходят под активные заказы.
+- Семь нарисованных портретов гостей; персонажи повторяются в заказах, эмодзи вместо лиц больше не используются.
+- Визуальная схема отеля и улучшения вестибюля, номеров, ресторана и зимнего сада.
+- Лавка кристаллов: +50 энергии за 10 кристаллов, усилитель уровня за 15, обновление заказа за 12, праздничный декор за 20.
+- Склад с возможностью убрать предмет с поля, вернуть его и расширить склад за кристаллы.
+- Сезонное событие «Зимний королевский бал»: каждый выданный заказ приносит 5 снежинок; за 20 снежинок можно забрать 500 монет и 10 кристаллов.
+- Прогресс, склад, кристаллы и событие сохраняются локально на устройстве.
 
-Gameplay:
-- Four permanent generators are placed directly on the 7x8 board.
-- Tap a generator once to select it, tap again to produce an item for 1 energy.
-- Drag an item onto an identical item, or tap two identical items in sequence, to merge.
-- There are six guest orders. Swipe the order row horizontally to browse them.
-- Tap the requested item icon in any guest order to open its recipe and source generator.
-- Progress saves locally in the browser.
+Установка на GitHub Pages:
+1. Распакуйте архив.
+2. Замените содержимое репозитория файлами из архива (папку assets загрузить целиком).
+3. Дождитесь успешного GitHub Actions / Pages deployment.
+4. Откройте сайт и обновите страницу. Если отображается старая версия, закройте вкладку и откройте игру заново, чтобы обновился Service Worker.
+
+Старое сохранение игры использует тот же ключ localStorage и должно сохраниться.
