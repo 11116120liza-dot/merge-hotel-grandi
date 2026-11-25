@@ -12,6 +12,6 @@
 </head>
 <body>
 <noscript>Для запуска Merge Hotel включите JavaScript.</noscript>
-<script src="game.js?v=13"></script>
+<script src="game.js?v=12"></script>
 </body>
 </html>
